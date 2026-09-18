@@ -38,6 +38,8 @@ If you use this code or metrics, please cite the accompanying manuscript and thi
 
 MIT License (see `LICENSE`).
 
-## Author
+## Authors
 
-Arpan Bom
+- Arpan Bom
+- Sushanta Khadka
+
