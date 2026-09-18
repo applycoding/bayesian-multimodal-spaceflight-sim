@@ -1,4 +1,4 @@
-# Integrated Bayesian Multimodal Longitudinal Physiological Analysis — Simulation Code
+# Integrated Bayesian Multimodal Longitudinal Physiological Analysis - Simulation Code
 
 Supporting data and code for the manuscript:
 
@@ -12,7 +12,7 @@ Supporting data and code for the manuscript:
 | `requirements.txt` | Python dependencies |
 | `results/metrics.json` | Numeric evaluation metrics (seed 42) |
 | `results/summary.md` | Human-readable results summary |
-| `figures/` | Figures 1–4 used in the manuscript |
+| `figures/` | Figures 1-4 used in the manuscript |
 
 ## Reproducibility
 
@@ -27,7 +27,7 @@ Fixed random seed: **42**.
 
 ## Important disclaimer
 
-All results in this repository are from a **controlled synthetic simulation** (8 crew × 90 mission days).  
+All results in this repository are from a **controlled synthetic simulation** (8 crew × 90 mission days). 
 **No NASA operational crew data, Artemis flight telemetry, or ISS astronaut health records were used.**
 
 ## Citation
