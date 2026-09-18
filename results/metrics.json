@@ -1,0 +1,193 @@
+{
+  "study_type": "synthetic_simulation",
+  "disclaimer": "All data are simulated. No real Artemis, ISS, or astronaut health records were used.",
+  "seed": 42,
+  "N_crew": 8,
+  "T_days": 90,
+  "latent_dim": 3,
+  "channels": [
+    "hrv",
+    "sleep_eff",
+    "cognitive",
+    "immune",
+    "activity",
+    "env_workload"
+  ],
+  "observation_rates": {
+    "hrv": 0.9291666666666667,
+    "sleep_eff": 0.9013888888888889,
+    "cognitive": 0.3611111111111111,
+    "immune": 0.1597222222222222,
+    "activity": 0.9527777777777777,
+    "env_workload": 0.9791666666666666
+  },
+  "elevated_fatigue_prevalence": 0.09583333333333334,
+  "gt_fatigue_threshold": 1.0,
+  "proposed_fatigue_alert_threshold": 0.8122507545573974,
+  "alert_probability_threshold": 0.8,
+  "ramp_crew": [
+    0,
+    2,
+    5
+  ],
+  "ramp_window_days": [
+    35,
+    65
+  ],
+  "confound_crew": [
+    1,
+    3,
+    4,
+    6
+  ],
+  "confound_window_days": [
+    40,
+    55
+  ],
+  "proposed_fatigue_corr_with_truth": 0.8790724988802737,
+  "proposed_fatigue_rmse": 0.26583324379074225,
+  "methods": [
+    {
+      "method": "Indep. thresholds",
+      "detection_delay_days": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_detection_delay": 0.0,
+      "median_detection_delay": 0.0,
+      "n_detected_ramps": 3,
+      "n_ramps": 3,
+      "false_alert_rate": 0.543778801843318,
+      "precision": 0.14903846153846154,
+      "recall": 0.8985507246376812,
+      "f1": 0.2556701030927835,
+      "auroc": 0.7730804336694941,
+      "auprc": 0.19337744904917947,
+      "alert_rate_overall": 0.5777777777777777
+    },
+    {
+      "method": "Univariate EWMA",
+      "detection_delay_days": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_detection_delay": 0.0,
+      "median_detection_delay": 0.0,
+      "n_detected_ramps": 3,
+      "n_ramps": 3,
+      "false_alert_rate": 0.82642089093702,
+      "precision": 0.11074380165289256,
+      "recall": 0.9710144927536232,
+      "f1": 0.19881305637982197,
+      "auroc": 0.7768984171508716,
+      "auprc": 0.19105779553380683,
+      "alert_rate_overall": 0.8402777777777778
+    },
+    {
+      "method": "Proposed multimodal SSM",
+      "detection_delay_days": [
+        1.0,
+        1.0,
+        0.0
+      ],
+      "mean_detection_delay": 0.6666666666666666,
+      "median_detection_delay": 1.0,
+      "n_detected_ramps": 3,
+      "n_ramps": 3,
+      "false_alert_rate": 0.04915514592933948,
+      "precision": 0.6559139784946236,
+      "recall": 0.8840579710144928,
+      "f1": 0.7530864197530864,
+      "auroc": 0.9753556401522742,
+      "auprc": 0.8017428195733334,
+      "alert_rate_overall": 0.12916666666666668
+    },
+    {
+      "method": "Ablation: HRV-only SSM",
+      "detection_delay_days": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_detection_delay": 0.0,
+      "median_detection_delay": 0.0,
+      "n_detected_ramps": 3,
+      "n_ramps": 3,
+      "false_alert_rate": 0.05222734254992319,
+      "precision": 0.6344086021505376,
+      "recall": 0.855072463768116,
+      "f1": 0.7283950617283951,
+      "auroc": 0.9731961976001247,
+      "auprc": 0.8296074515703867,
+      "alert_rate_overall": 0.12916666666666668
+    },
+    {
+      "method": "Ablation: sleep-only SSM",
+      "detection_delay_days": [
+        NaN,
+        9.0,
+        5.0
+      ],
+      "mean_detection_delay": 7.0,
+      "median_detection_delay": 7.0,
+      "n_detected_ramps": 2,
+      "n_ramps": 3,
+      "false_alert_rate": 0.0030721966205837174,
+      "precision": 0.9259259259259259,
+      "recall": 0.36231884057971014,
+      "f1": 0.5208333333333334,
+      "auroc": 0.9727286894187315,
+      "auprc": 0.8041735676743674,
+      "alert_rate_overall": 0.0375
+    }
+  ],
+  "comparison_table": {
+    "Indep. thresholds": {
+      "F1": 0.2556701030927835,
+      "AUROC": 0.7730804336694941,
+      "precision": 0.14903846153846154,
+      "recall": 0.8985507246376812,
+      "mean_detection_delay": 0.0,
+      "false_alert_rate": 0.543778801843318,
+      "n_detected_ramps": 3
+    },
+    "Univariate EWMA": {
+      "F1": 0.19881305637982197,
+      "AUROC": 0.7768984171508716,
+      "precision": 0.11074380165289256,
+      "recall": 0.9710144927536232,
+      "mean_detection_delay": 0.0,
+      "false_alert_rate": 0.82642089093702,
+      "n_detected_ramps": 3
+    },
+    "Proposed multimodal SSM": {
+      "F1": 0.7530864197530864,
+      "AUROC": 0.9753556401522742,
+      "precision": 0.6559139784946236,
+      "recall": 0.8840579710144928,
+      "mean_detection_delay": 0.6666666666666666,
+      "false_alert_rate": 0.04915514592933948,
+      "n_detected_ramps": 3
+    },
+    "Ablation: HRV-only SSM": {
+      "F1": 0.7283950617283951,
+      "AUROC": 0.9731961976001247,
+      "precision": 0.6344086021505376,
+      "recall": 0.855072463768116,
+      "mean_detection_delay": 0.0,
+      "false_alert_rate": 0.05222734254992319,
+      "n_detected_ramps": 3
+    },
+    "Ablation: sleep-only SSM": {
+      "F1": 0.5208333333333334,
+      "AUROC": 0.9727286894187315,
+      "precision": 0.9259259259259259,
+      "recall": 0.36231884057971014,
+      "mean_detection_delay": 7.0,
+      "false_alert_rate": 0.0030721966205837174,
+      "n_detected_ramps": 2
+    }
+  }
+}
